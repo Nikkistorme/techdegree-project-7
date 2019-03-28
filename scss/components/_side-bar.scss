@@ -1,0 +1,12 @@
+
+.side-bar {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    a img {
+      width: 40px;
+    }
+  }
+}
