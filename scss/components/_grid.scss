@@ -3,7 +3,7 @@
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 20fr;
+  grid-template-rows: 60px 1fr;
 }
 
 .sub-container {
@@ -24,9 +24,9 @@
     "message-user settings";
 }
 
-.grid-item1 {
-  border: solid 2px black;
-}
+// .grid-item1 {
+//   border: solid 2px black;
+// }
 
 .grid-item2 {
   border: solid 2px blue;
