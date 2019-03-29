@@ -9,7 +9,7 @@
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 70px);
   grid-template-areas:
     "dashboard dashboard"
     "alert-box alert-box"
@@ -28,9 +28,9 @@
 //   border: solid 2px black;
 // }
 
-.grid-item2 {
-  border: solid 2px blue;
-}
+// .grid-item2 {
+//   border: solid 2px blue;
+// }
 
 .dashboard {
   grid-area: dashboard;

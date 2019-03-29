@@ -335,7 +335,7 @@ template {
 }
 
 body {
-  background: #FBFBFB;
+  background: #FFFFFF;
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -347,11 +347,21 @@ header {
 
 h1 {
   margin: 0;
-  color: #FBFBFB;
-  font-size: 1.5em;
+  color: #FFFFFF;
+  font-size: 1.4em;
 }
 h1 span {
   font-weight: lighter;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
 }
 
 sup {
@@ -368,12 +378,8 @@ sup {
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 70px);
   grid-template-areas: "dashboard dashboard" "alert-box alert-box" "traffic traffic" "traffic traffic" "daily-traffic mobile-users" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "new-members recent-activity" "message-user settings" "message-user settings";
-}
-
-.grid-item2 {
-  border: solid 2px blue;
 }
 
 .dashboard {
@@ -438,7 +444,7 @@ sup {
   width: 100%;
 }
 .side-bar nav a img {
-  width: 35px;
+  width: 30px;
 }
 
 .header {
@@ -455,16 +461,55 @@ sup {
   width: 30px;
   padding-top: 7px;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .current-user {
-  padding-top: 5px;
   padding-right: 5px;
+  padding-left: 15px;
+  border-left: 1px solid #6568BF;
 }
 .current-user img {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
+  vertical-align: middle;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.dashboard h2 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.dashboard .search-bar {
+  background-color: #FBFBFB;
+  border-left: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.dashboard .search-bar input {
+  height: 60%;
+  width: 90%;
+  border-radius: 7px;
+  border: 1px solid lightgrey;
+  text-indent: 15px;
+  font-size: 1em;
+  background: white url(../icons/icon-search.svg) no-repeat;
+  background-position: 98%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+.dashboard .search-bar input:focus {
+  outline: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
