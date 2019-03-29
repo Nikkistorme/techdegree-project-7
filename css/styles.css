@@ -378,8 +378,12 @@ sup {
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(11, 70px);
-  grid-template-areas: "dashboard dashboard" "alert-box alert-box" "traffic traffic" "traffic traffic" "daily-traffic mobile-users" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "new-members recent-activity" "message-user settings" "message-user settings";
+  grid-template-rows: 70px 70px 200px 160px 70px 160px 160px;
+  grid-template-areas: "dashboard dashboard" "alert-box alert-box" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
+}
+
+.grid-item2 {
+  border: solid 2px blue;
 }
 
 .dashboard {
@@ -445,6 +449,22 @@ sup {
 }
 .side-bar nav a img {
   width: 30px;
+}
+
+.alert-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #7477BF;
+  border-radius: 5px;
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #FFFFFF;
+}
+.alert-banner p {
+  font-size: 0.7em;
+  width: 80%;
 }
 
 .header {
