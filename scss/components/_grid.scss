@@ -9,7 +9,7 @@
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 70px 200px repeat(7, 1fr);
+  grid-template-rows: 70px 70px repeat(8, auto);
   grid-template-areas:
     "dashboard"
     "alert-box"
@@ -28,7 +28,7 @@
 // }
 
 // .grid-item2 {
-//   border: solid 1px blue;
+//   margin: 15px 0;
 // }
 
 .dashboard {

@@ -1,1 +1,47 @@
-// ayy lmao
+
+.recent-activity {
+  margin: 15px 20px;
+  border-bottom: 1px solid lightgrey;
+  .activities-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 75px);
+    grid-row-gap: 15px;
+    margin-top: 30px;
+    .activity {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid lighten(lightgrey, 10%);
+      &-image {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 15px;
+        img {
+          display: inline;
+          margin: 0 auto;
+          height: 100%;
+          width: auto;
+        }
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        height: 60px;
+        p {
+          margin: 0;
+        }
+        &-timestamp {
+          margin-top: auto;
+        }
+      }
+      &-four {
+        border: 0;
+      }
+    }
+  }
+}

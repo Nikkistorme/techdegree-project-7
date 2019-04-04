@@ -1,1 +1,39 @@
-// ayy lmao
+
+.social-stats {
+  margin: 15px 20px;
+  padding-bottom: 30px;
+  border-bottom: lightgrey solid 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 30px;
+  .social-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-off-white;
+    border: 1px solid lightgrey;
+    &-descript {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: auto;
+      margin-left: 20px;
+      h3 {
+        color: $color-indigo;
+        font-size: 1.5em;
+        margin: 0;
+      }
+      p {
+        font-size: 3em;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.icon-social {
+  width: 75px;
+}

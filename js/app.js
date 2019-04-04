@@ -5,26 +5,6 @@
 const chart1 = document.getElementById('trafficChart');
 const trafficChart = new Chart(chart1, {
   type: 'line',
-  options: {
-    responsive: true,
-    legend: {
-      display: false
-    },
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          stepSize: 500,
-          max: 2500,
-        }
-      }],
-      xAxes: [{
-        ticks: {
-          maxTicksLimit: 11
-        }
-      }]
-    }
-  },
   data: {
     labels: [
       '',
@@ -41,23 +21,108 @@ const trafficChart = new Chart(chart1, {
       '25-31'],
     datasets: [{
       data: [
-        {t:0,y:0},
-        {t:1,y:500},
-        {t:2,y:1000},
-        {t:2.5,y:750},
-        {t:3.5,y:1250},
-        {t:4.5,y:1750},
-        {t:5.5,y:1250},
-        {t:6,y:1500},
-        {t:7,y:1000},
-        {t:8,y:1500},
-        {t:9,y:2000},
-        {t:10,y:1500},
-        {t:11,y:2000}
+        0,
+        500,
+        1000,
+        750,
+        1250,
+        1750,
+        1250,
+        1500,
+        1000,
+        1500,
+        2000,
+        1500
       ],
       backgroundColor: 'rgba(226, 227, 246, 0.7)',
       borderColor: 'rgba(116, 119, 191, 1)',
       borderWidth: .5
     }]
+  },
+  options: {
+    responsive: true,
+    legend: {
+      display: false
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+          stepSize: 500,
+          max: 2500,
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          maxTicksLimit: 12
+        }
+      }]
+    },
+    elements: {
+      line: {
+        tension: 0
+      }
+    }
+  }
+})
+
+// DAILY TRAFFIC BAR CHART
+const chart2 = document.getElementById('dailyTrafficChart');
+const dailyTrafficChart = new Chart(chart2, {
+  type: 'bar',
+  data: {
+    labels: [
+      'S',
+      'M',
+      'T',
+      'W',
+      'T',
+      'F',
+      'S'
+    ],
+    datasets: [
+      {
+        label: 'Daily Users (thousands)',
+        backgroundColor: ['#7377BF','#7377BF','#7377BF','#7377BF','#7377BF','#7377BF','#7377BF'],
+        data: [50,75,150,100,200,175,75]
+      }
+    ]
+  },
+  options: {
+    legend: { display: false },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+          stepSize: 50,
+          max: 250
+        }
+      }]
+    }
+  }
+})
+
+// MOBILE USERS PIE CHART
+const chart3 = document.getElementById('mobileUsersChart');
+const mobileUsersChart = new Chart(chart3, {
+  type: 'doughnut',
+  data: {
+    labels: [
+      'Phones',
+      'Tablets',
+      'Desktop'
+    ],
+    datasets: [{
+      backgroundColor: ['#74B1BF', '#81C98F', '#7377BF'],
+      data: [15, 25, 60]
+    }]
+  },
+  options: {
+    legend: {
+      position: 'right',
+      labels: {
+        boxWidth: 13
+      }
+    }
   }
 })
