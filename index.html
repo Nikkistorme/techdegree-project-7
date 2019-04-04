@@ -221,66 +221,69 @@
         </div>
         <div class="settings grid-item2">
           <h3>SETTINGS</h3>
-          <div class="settings-toggles">
-            <div class="toggle-1-descript">
-              <p>Send Email Notifications</p>
+          <form class="settings-form" action="index.html" method="get">
+            <div class="settings-toggles">
+              <div class="toggle-1-descript">
+                <p>Send Email Notifications</p>
+              </div>
+              <div class="toggle-1">
+                <input type="checkbox" class="switch-1" id="switch-1" checked />
+                <label for="switch-1" class="switch-label-1"></label>
+                <p class="toggle-on">ON</p>
+                <p class="toggle-off">OFF</p>
+              </div>
+              <div class="toggle-2-descript">
+                <p>Set Profile to Public</p>
+              </div>
+              <div class="toggle-2">
+                <input type="checkbox" class="switch-2" id="switch-2" checked />
+                <label for="switch-2" class="switch-label-2"></label>
+                <p class="toggle-on">ON</p>
+                <p class="toggle-off">OFF</p>
+              </div>
             </div>
-            <div class="toggle-1">
-              <input type="checkbox" class="switch-1" id="switch-1" checked />
-              <label for="switch-1" class="switch-label-1"></label>
-              <p class="toggle-on">ON</p>
-              <p class="toggle-off">OFF</p>
+            <div class="timezone-container">
+              <select class="timezone" name="timezone">
+                <option value="">Your Timezone</option>
+                <option value="">GMT</option>
+                <option value="">UTC</option>
+                <option value="">ECT</option>
+                <option value="">EET</option>
+                <option value="">ART</option>
+                <option value="">EAT</option>
+                <option value="">MET</option>
+                <option value="">NET</option>
+                <option value="">PLT</option>
+                <option value="">IST</option>
+                <option value="">BST</option>
+                <option value="">VST</option>
+                <option value="">CTT</option>
+                <option value="">JST</option>
+                <option value="">ACT</option>
+                <option value="">AET</option>
+                <option value="">SST</option>
+                <option value="">NST</option>
+                <option value="">MIT</option>
+                <option value="">HST</option>
+                <option value="">AST</option>
+                <option value="">PST</option>
+                <option value="">PNT</option>
+                <option value="">MST</option>
+                <option value="">CST</option>
+                <option value="">EST</option>
+                <option value="">IET</option>
+                <option value="">PRT</option>
+                <option value="">CNT</option>
+                <option value="">AGT</option>
+                <option value="">BET</option>
+                <option value="">CAT</option>
+              </select>
             </div>
-            <div class="toggle-2-descript">
-              <p>Set Profile to Public</p>
+            <div class="settings-buttons">
+              <input class="settings-submit" type="submit" name="settings-submit" value="SUBMIT">
+              <input class="settings-cancel" type="reset" name="settings-cancel" value="CANCEL">
             </div>
-            <div class="toggle-2">
-              <input type="checkbox" class="switch-2" id="switch-2" checked />
-              <label for="switch-2" class="switch-label-2"></label>
-              <p class="toggle-on">ON</p>
-              <p class="toggle-off">OFF</p>
-            </div>
-          </div>
-          <div class="timezone-container">
-            <select class="timezone" name="timezone">
-              <option value="">GMT</option>
-              <option value="">UTC</option>
-              <option value="">ECT</option>
-              <option value="">EET</option>
-              <option value="">ART</option>
-              <option value="">EAT</option>
-              <option value="">MET</option>
-              <option value="">NET</option>
-              <option value="">PLT</option>
-              <option value="">IST</option>
-              <option value="">BST</option>
-              <option value="">VST</option>
-              <option value="">CTT</option>
-              <option value="">JST</option>
-              <option value="">ACT</option>
-              <option value="">AET</option>
-              <option value="">SST</option>
-              <option value="">NST</option>
-              <option value="">MIT</option>
-              <option value="">HST</option>
-              <option value="">AST</option>
-              <option value="">PST</option>
-              <option value="">PNT</option>
-              <option value="">MST</option>
-              <option value="">CST</option>
-              <option value="">EST</option>
-              <option value="">IET</option>
-              <option value="">PRT</option>
-              <option value="">CNT</option>
-              <option value="">AGT</option>
-              <option value="">BET</option>
-              <option value="">CAT</option>
-            </select>
-          </div>
-          <div class="settings-buttons">
-            <input class="settings-submit" type="submit" name="settings-submit" value="SUBMIT">
-            <input class="settings-cancel" type="submit" name="settings-cancel" value="CANCEL">
-          </div>
+          </form>
         </div>
       </div>
     </div>
