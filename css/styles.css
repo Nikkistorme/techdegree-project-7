@@ -446,7 +446,7 @@ a {
 
 .chart-container {
   position: relative;
-  width: 90vw;
+  width: 100%;
   margin: 0;
 }
 
@@ -503,7 +503,6 @@ a {
   display: grid;
   grid-template-columns: 180px 80px;
   grid-template-rows: repeat(2, 50px);
-  grid-column-gap: 60px;
   align-items: center;
 }
 
@@ -514,7 +513,7 @@ a {
 
 .toggle-on {
   position: absolute;
-  margin: -6.5% 0 0 2.5%;
+  margin: -7.4% 0 0 2.5%;
   font-size: 1em;
   color: #FFFFFF;
   z-index: 1;
@@ -523,7 +522,7 @@ a {
 
 .toggle-off {
   position: absolute;
-  margin: -6.5% 0 0 11%;
+  margin: -7.4% 0 0 13%;
   font-size: 1em;
   color: lightgrey;
   z-index: 1;
@@ -670,6 +669,7 @@ a {
 .new-members {
   margin: 15px 20px;
   border-bottom: 1px solid lightgrey;
+  width: 87vw;
 }
 .new-members .members-list {
   display: grid;
@@ -710,6 +710,7 @@ a {
 }
 .new-members .members-list .member-info-contact a {
   color: #8080ff;
+  font-size: 0.8em;
 }
 .new-members .members-list .member-info-date {
   text-align: right;
@@ -724,6 +725,7 @@ a {
 .recent-activity {
   margin: 15px 20px;
   border-bottom: 1px solid lightgrey;
+  width: 87vw;
 }
 .recent-activity .activities-list {
   display: grid;
@@ -776,6 +778,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-row-gap: 30px;
+  width: 87vw;
 }
 .social-stats .social-box {
   padding: 20px;
@@ -810,6 +813,7 @@ a {
 .daily-traffic {
   margin: 15px 20px;
   border-bottom: lightgrey solid 1px;
+  width: 87vw;
 }
 .daily-traffic canvas {
   margin: 20px 0;
@@ -818,6 +822,7 @@ a {
 .mobile-users {
   margin: 15px 20px;
   border-bottom: 1px solid lightgrey;
+  width: 87vw;
 }
 .mobile-users canvas {
   margin: 20px 0;
@@ -826,6 +831,7 @@ a {
 .traffic {
   margin: 15px 20px;
   border-bottom: lightgrey solid 1px;
+  width: 87vw;
 }
 .traffic .traffic-chart-nav {
   display: flex;

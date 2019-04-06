@@ -40,7 +40,7 @@ const trafficChart = new Chart(chart1, {
     }]
   },
   options: {
-    // maintainAspectRatio: false,
+    maintainAspectRatio: false,
     responsive: true,
     legend: {
       display: false
@@ -90,6 +90,8 @@ const dailyTrafficChart = new Chart(chart2, {
     ]
   },
   options: {
+    maintainAspectRatio: false,
+    responsive: true,
     legend: { display: false },
     scales: {
       yAxes: [{
@@ -119,6 +121,8 @@ const mobileUsersChart = new Chart(chart3, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
+    responsive: true,
     legend: {
       position: 'right',
       labels: {
