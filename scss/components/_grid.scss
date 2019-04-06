@@ -9,7 +9,7 @@
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 70px repeat(8, auto);
+  grid-template-rows: 70px repeat(9, auto);
   grid-template-areas:
     "dashboard"
     "alert-box"
@@ -21,7 +21,8 @@
     "recent-activity"
     "message-user"
     "settings";
-}
+    justify-items: center;
+  }
 
 // .grid-item1 {
 //   border: solid 1px black;
@@ -78,7 +79,7 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .main-container {
     grid-template-columns: 1.3fr 16.3fr;
     grid-template-rows: 1fr;

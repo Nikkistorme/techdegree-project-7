@@ -400,8 +400,9 @@ a {
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 70px repeat(8, auto);
+  grid-template-rows: 70px repeat(9, auto);
   grid-template-areas: "dashboard" "alert-box" "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
+  justify-items: center;
 }
 
 .dashboard {
@@ -450,7 +451,7 @@ a {
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .main-container {
     grid-template-columns: 1.3fr 16.3fr;
     grid-template-rows: 1fr;
@@ -463,6 +464,7 @@ a {
 .message-user {
   margin: 15px 20px;
   border-bottom: 1px solid lightgrey;
+  width: 87vw;
 }
 .message-user .message {
   margin: 20px 0;
@@ -496,12 +498,21 @@ a {
 
 .settings {
   margin: 15px 20px;
+  width: 87vw;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  .settings {
+    width: 500px;
+    align-self: center;
+  }
 }
 
 .settings-toggles {
   margin-left: 10px;
   display: grid;
-  grid-template-columns: 180px 80px;
+  grid-template-columns: 180px 1fr 80px;
   grid-template-rows: repeat(2, 50px);
   align-items: center;
 }
@@ -513,7 +524,7 @@ a {
 
 .toggle-on {
   position: absolute;
-  margin: -7.4% 0 0 2.5%;
+  margin: -24px 0 0 10px;
   font-size: 1em;
   color: #FFFFFF;
   z-index: 1;
@@ -522,7 +533,7 @@ a {
 
 .toggle-off {
   position: absolute;
-  margin: -7.4% 0 0 13%;
+  margin: -24px 0 0 42px;
   font-size: 1em;
   color: lightgrey;
   z-index: 1;
@@ -702,6 +713,11 @@ a {
   flex-direction: column;
   flex: 1;
 }
+@media (min-width: 500px) {
+  .new-members .members-list .member-info {
+    flex-direction: row;
+  }
+}
 .new-members .members-list .member-info-contact {
   margin-top: 10px;
 }
@@ -712,11 +728,22 @@ a {
   color: #8080ff;
   font-size: 0.8em;
 }
+@media (min-width: 380px) {
+  .new-members .members-list .member-info-contact a {
+    font-size: 1em;
+  }
+}
 .new-members .members-list .member-info-date {
   text-align: right;
 }
 .new-members .members-list .member-info p {
   margin: 0;
+}
+@media (min-width: 500px) {
+  .new-members .members-list .member-info p {
+    margin-left: auto;
+    align-self: center;
+  }
 }
 .new-members .members-list .member-four {
   border-bottom: 0;
@@ -756,7 +783,7 @@ a {
 .recent-activity .activities-list .activity-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   flex: 1;
   height: 60px;
 }
@@ -778,6 +805,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-row-gap: 30px;
+  justify-items: center;
   width: 87vw;
 }
 .social-stats .social-box {
@@ -788,6 +816,8 @@ a {
   justify-content: space-between;
   background-color: #FBFBFB;
   border: 1px solid lightgrey;
+  max-width: 330px;
+  min-width: 277px;
 }
 .social-stats .social-box-descript {
   display: flex;
@@ -832,6 +862,7 @@ a {
   margin: 15px 20px;
   border-bottom: lightgrey solid 1px;
   width: 87vw;
+  padding-bottom: 10px;
 }
 .traffic .traffic-chart-nav {
   display: flex;
@@ -844,6 +875,11 @@ a {
 .traffic .traffic-chart-nav li {
   border-radius: 20px;
   padding: 5px 10px;
+}
+@media (min-width: 500px) {
+  .traffic .traffic-chart-nav li {
+    font-size: 1.1em;
+  }
 }
 .traffic .traffic-chart-nav li.active {
   color: #FFFFFF;
@@ -862,9 +898,24 @@ a {
   padding-right: 10px;
   color: #FFFFFF;
 }
+@media (min-width: 600px) {
+  .alert-banner {
+    margin: 15px;
+  }
+}
 .alert-banner p {
   font-size: 0.7em;
   width: 80%;
+}
+@media (min-width: 500px) {
+  .alert-banner p {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 600px) {
+  .alert-banner p {
+    font-size: 1em;
+  }
 }
 .alert-banner h3 {
   margin: 0;
@@ -903,6 +954,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 .dashboard h2 {
   margin-left: 15px;
@@ -930,6 +982,7 @@ a {
   background-position: 98%;
   margin-left: auto;
   margin-right: 5%;
+  max-width: 350px;
 }
 .dashboard .search-bar input:focus {
   outline: 0;

@@ -31,6 +31,9 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        @media (min-width: 500px) {
+          flex-direction: row;
+        }
         &-contact {
           margin-top: 10px;
           p {
@@ -39,6 +42,9 @@
           a {
             color: #8080ff;
             font-size: .8em;
+            @media (min-width: 380px) {
+              font-size: 1em;
+            }
           }
         }
         &-date {
@@ -46,6 +52,10 @@
         }
         p {
           margin: 0;
+          @media (min-width: 500px) {
+            margin-left: auto;
+            align-self: center;
+          }
         }
       }
     }
