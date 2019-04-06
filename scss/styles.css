@@ -446,8 +446,6 @@ a {
 
 .chart-container {
   position: relative;
-  width: 90vw;
-  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -612,7 +610,7 @@ a {
   border: 1px lightgrey solid;
   border-radius: 7px;
   background: transparent;
-  font-size: 16px;
+  font-size: 20px;
   color: grey;
   padding: 2px 10px;
   width: 100%;

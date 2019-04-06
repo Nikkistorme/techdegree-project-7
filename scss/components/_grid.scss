@@ -71,6 +71,13 @@
   grid-area: settings;
 }
 
+// allow responsiveness of charts
+.chart-container {
+  position: relative;
+  width: 90vw;
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .main-container {
     grid-template-columns: 1.3fr 16.3fr;

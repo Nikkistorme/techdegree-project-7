@@ -40,6 +40,7 @@ const trafficChart = new Chart(chart1, {
     }]
   },
   options: {
+    // maintainAspectRatio: false,
     responsive: true,
     legend: {
       display: false
