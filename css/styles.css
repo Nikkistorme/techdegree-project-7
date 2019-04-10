@@ -753,6 +753,7 @@ a {
 }
 .side-bar nav a img {
   width: 30px;
+  pointer-events: none;
 }
 @media (min-width: 1024px) {
   .side-bar nav a img {
@@ -1205,11 +1206,32 @@ a {
   padding-left: 5px;
 }
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .notifications {
   width: 30px;
   padding-top: 7px;
   margin-left: auto;
   margin-right: 15px;
+  transition: transform 0.5s ease-out;
+}
+.notifications:hover {
+  animation: wiggle 0.5s 1;
 }
 
 .current-user {

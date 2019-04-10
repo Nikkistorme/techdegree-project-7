@@ -22,11 +22,11 @@
     </header>
     <div class="main-container">
       <div class="side-bar grid-item1">
-        <nav>
-          <a class="active" href="#dashboard"><img src="icons/icon-dashboard.svg" alt="Dashboard Icon"></a>
-          <a href="#members"><img src="icons/icon-members.svg" alt="Members Icon"></a>
-          <a href="#visits"><img src="icons/icon-visits.svg" alt="Visits Icon"></a>
-          <a href="#settings"><img src="icons/icon-settings.svg" alt="Settings Icon"></a>
+        <nav id="navigation">
+          <a class="nav-link active" href="#dashboard"><img src="icons/icon-dashboard.svg" alt="Dashboard Icon"></a>
+          <a class="nav-link" href="#members"><img src="icons/icon-members.svg" alt="Members Icon"></a>
+          <a class="nav-link" href="#visits"><img src="icons/icon-visits.svg" alt="Visits Icon"></a>
+          <a class="nav-link" href="#settings"><img src="icons/icon-settings.svg" alt="Settings Icon"></a>
         </nav>
       </div>
       <div class="sub-container">
@@ -38,10 +38,10 @@
           </div>
         </div>
         <div class="alert-box grid-item2">
-          <div class="alert-banner">
+          <div id="alert-banner" class="alert-banner">
             <h3>Alert</h3>
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
-            <button><span class="fas fa-times"></span></button>
+            <button id="alert-clear-button"><span class="fas fa-times"></span></button>
           </div>
         </div>
         <div class="traffic grid-item2">
@@ -221,9 +221,9 @@
         <div class="message-user grid-item2">
           <h3>MESSAGE USER</h3>
           <form class="message" id="message-form" method="get">
-            <input class="message-input" type="text" name="search-for-user" placeholder="Search for User">
-            <textarea class="message-input" name="message-guts" rows="5" cols="20" placeholder="Message for User"></textarea>
-            <input class="message-submit" type="submit" name="message-submit" value="SEND">
+            <input id="message-user" class="message-input" type="text" name="search-for-user" placeholder="Search for User">
+            <textarea id="message-content" class="message-input" name="message-guts" rows="5" cols="20" placeholder="Message for User"></textarea>
+            <input id="message-submit" class="message-submit" type="submit" name="message-submit" value="SEND">
           </form>
         </div>
         <div id="settings" class="settings grid-item2">
@@ -296,6 +296,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="js/my-charts.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

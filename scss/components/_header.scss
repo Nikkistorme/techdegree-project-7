@@ -9,11 +9,23 @@
   }
 }
 
+@keyframes wiggle {
+  0% {transform: rotate(10deg);}
+  25% {transform: rotate(-10deg);}
+  50% {transform: rotate(20deg);}
+  75% {transform: rotate(-10deg);}
+  100% {transform: rotate(0deg);}
+}
+
 .notifications {
   width: 30px;
   padding-top: 7px;
   margin-left: auto;
   margin-right: 15px;
+  transition: transform .5s ease-out;
+  &:hover {
+    animation: wiggle .5s 1;
+  }
 }
 
 .current-user {
