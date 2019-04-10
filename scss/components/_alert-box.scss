@@ -13,6 +13,9 @@
   @media (min-width: 600px) {
     margin: 15px;
   }
+  @media (min-width: 1024px) {
+    justify-content: space-around;
+  }
   p {
     font-size: .7em;
     width: 80%;
@@ -26,4 +29,8 @@
   h3 {
     margin: 0;
   }
+}
+
+.alert-box {
+  width: 100%;
 }

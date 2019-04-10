@@ -3,13 +3,37 @@
   display: flex;
   align-items: center;
   background-color: $color-deep-purple;
+  width: 100%;
   nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    a img {
-      width: 30px;
+    a {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      border: 5px solid transparent;
+      &.active {
+        border-left: 5px solid #81C98F;
+      }
+      img {
+        width: 30px;
+        @media (min-width: 1024px) {
+          width: 35px;
+        }
+      }
+      @media (min-width: 1024px) {
+        margin-bottom: 20px;
+        text-align: center;  
+      }
     }
+    @media (min-width: 1024px) {
+      flex-direction: column;
+      margin-top: 25px;
+    }  
+  }
+  @media (min-width: 1024px) {
+    align-items: flex-start;
   }
 }

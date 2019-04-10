@@ -6,4 +6,12 @@
   canvas {
     margin: 20px 0;
   }
+  @media (min-width: 768px) {
+    width: 50vw;
+    margin: 0;
+    padding: 15px 20px;
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
 }

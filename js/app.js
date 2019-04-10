@@ -40,6 +40,7 @@ const trafficChart = new Chart(chart1, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     responsive: true,
     legend: {
       display: false
@@ -61,6 +62,10 @@ const trafficChart = new Chart(chart1, {
     elements: {
       line: {
         tension: 0
+      },
+      point: {
+        radius: 7,
+        backgroundColor: 'rgba(0, 0, 0, 0)'
       }
     }
   }
@@ -128,3 +133,6 @@ const mobileUsersChart = new Chart(chart3, {
     }
   }
 })
+
+
+// ALERT-BOX

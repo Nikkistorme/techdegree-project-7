@@ -23,4 +23,15 @@
       }
     }
   }
+  @media (min-width: 768px) {
+    margin: 0;
+    padding: 15px 20px;
+    width: 100vw;
+    .chart-container {
+      height: 230px;
+    }
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
 }

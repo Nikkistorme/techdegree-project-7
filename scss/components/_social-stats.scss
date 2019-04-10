@@ -5,7 +5,7 @@
   border-bottom: lightgrey solid 1px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: repeat(3, auto);
   grid-row-gap: 30px;
   justify-items: center;
   width: 87vw;
@@ -38,6 +38,52 @@
   }
   h3 {
     justify-self: start;
+    @media (min-width: 768px) {
+      grid-area: social-title;
+    }
+  }
+  .twitter {
+    @media (min-width: 768px) {
+      grid-area: twitter;
+      justify-self: end;
+    }
+    @media (min-width: 1024px) {
+      justify-self: center;
+    }
+  }
+  .facebook {
+    @media (min-width: 768px) {
+      grid-area: facebook;
+      justify-self: start;
+    }
+    @media (min-width: 1024px) {
+      justify-self: center;
+    }
+  }
+  .google-plus {
+    @media (min-width: 768px) {
+      grid-area: google-plus;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 100vw;
+    margin: 0;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "social-title social-title"
+    "twitter facebook"
+    "google-plus google-plus";
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "social-title social-title social-title"
+    "twitter facebook google-plus";
+    width: 100%;
   }
 }
 
