@@ -64,7 +64,7 @@ const trafficChart = new Chart(chart1, {
         tension: 0
       },
       point: {
-        radius: 7,
+        radius: 5,
         backgroundColor: 'rgba(0, 0, 0, 0)'
       }
     }

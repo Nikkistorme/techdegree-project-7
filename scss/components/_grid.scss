@@ -39,15 +39,10 @@
       "message-user settings";
     justify-items: start;
   }
+  @media (min-width: 1024px) {
+    justify-items: center;
+  }
 }
-
-// .grid-item1 {
-//   border: solid 1px black;
-// }
-
-// .grid-item2 {
-//   margin: 15px 0;
-// }
 
 .dashboard {
   grid-area: dashboard;

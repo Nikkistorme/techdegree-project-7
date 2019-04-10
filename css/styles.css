@@ -418,6 +418,11 @@ a {
     justify-items: start;
   }
 }
+@media (min-width: 1024px) {
+  .sub-container {
+    justify-items: center;
+  }
+}
 
 .dashboard {
   grid-area: dashboard;
@@ -511,6 +516,8 @@ a {
 @media (min-width: 1024px) {
   .message-user {
     width: 100%;
+    max-width: 550px;
+    justify-self: end;
   }
 }
 
@@ -544,6 +551,8 @@ a {
 @media (min-width: 1024px) {
   .settings {
     width: 100%;
+    max-width: 550px;
+    justify-self: start;
   }
 }
 
@@ -721,13 +730,26 @@ a {
   width: 100%;
 }
 .side-bar nav a {
-  height: 70px;
   display: flex;
   justify-content: center;
+  height: 60px;
+  width: 70px;
   border: 5px solid transparent;
 }
+@media (min-width: 1024px) {
+  .side-bar nav a {
+    width: auto;
+    height: 70px;
+  }
+}
 .side-bar nav a.active {
-  border-left: 5px solid #81C98F;
+  border-bottom: 5px solid #81C98F;
+}
+@media (min-width: 1024px) {
+  .side-bar nav a.active {
+    border: 5px solid transparent;
+    border-left: 5px solid #81C98F;
+  }
 }
 .side-bar nav a img {
   width: 30px;
@@ -847,6 +869,8 @@ a {
 @media (min-width: 1024px) {
   .new-members {
     width: 100%;
+    max-width: 550px;
+    justify-self: end;
   }
 }
 
@@ -907,6 +931,8 @@ a {
 @media (min-width: 1024px) {
   .recent-activity {
     width: 100%;
+    max-width: 550px;
+    justify-self: start;
   }
 }
 
@@ -947,6 +973,11 @@ a {
 .social-stats .social-box-descript p {
   font-size: 3em;
   margin: 0;
+}
+@media (min-width: 1250px) {
+  .social-stats .social-box {
+    width: 330px;
+  }
 }
 .social-stats h3 {
   justify-self: start;
@@ -1000,6 +1031,7 @@ a {
     grid-template-rows: auto auto;
     grid-template-areas: "social-title social-title social-title" "twitter facebook google-plus";
     width: 100%;
+    max-width: 1100px;
   }
 }
 
@@ -1026,6 +1058,8 @@ a {
 @media (min-width: 1024px) {
   .daily-traffic {
     width: 100%;
+    max-width: 550px;
+    justify-self: end;
   }
 }
 
@@ -1047,6 +1081,8 @@ a {
 @media (min-width: 1024px) {
   .mobile-users {
     width: 100%;
+    max-width: 550px;
+    justify-self: start;
   }
 }
 
@@ -1077,19 +1113,25 @@ a {
   color: #FFFFFF;
   background-color: #81c98f;
 }
+.traffic .chart-container {
+  height: 180px;
+}
+@media (min-width: 768px) {
+  .traffic .chart-container {
+    height: 280px;
+  }
+}
 @media (min-width: 768px) {
   .traffic {
     margin: 0;
     padding: 15px 20px;
     width: 100vw;
   }
-  .traffic .chart-container {
-    height: 230px;
-  }
 }
 @media (min-width: 1024px) {
   .traffic {
     width: 100%;
+    max-width: 1100px;
   }
 }
 
@@ -1110,9 +1152,9 @@ a {
     margin: 15px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .alert-banner {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 .alert-banner p {
@@ -1129,8 +1171,24 @@ a {
     font-size: 1em;
   }
 }
+@media (min-width: 768px) {
+  .alert-banner p {
+    width: 100%;
+    text-align: center;
+  }
+}
 .alert-banner h3 {
   margin: 0;
+}
+@media (min-width: 768px) {
+  .alert-banner h3 {
+    margin: 0 10px 0 10px;
+  }
+}
+@media (min-width: 768px) {
+  .alert-banner button {
+    margin: 0 10px 0 10px;
+  }
 }
 
 .alert-box {

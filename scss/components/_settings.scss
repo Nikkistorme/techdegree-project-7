@@ -23,6 +23,8 @@
   }
   @media (min-width: 1024px) {
     width: 100%;
+    max-width: 550px;
+    justify-self: start;
   }
 }
 
