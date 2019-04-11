@@ -521,6 +521,27 @@ a {
   }
 }
 
+.autocomplete {
+  position: relative;
+}
+.autocomplete #autocomplete-results {
+  display: none;
+  width: 100%;
+  margin-top: -2px;
+  background: #FBFBFB;
+  padding: 0;
+}
+.autocomplete #autocomplete-results li {
+  width: 100%;
+  padding: 20px 15px;
+  border-bottom: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+}
+.autocomplete #autocomplete-results li:hover {
+  background: #d5d5d5;
+}
+
 .settings {
   margin: 15px 20px;
   width: 87vw;
@@ -1230,8 +1251,48 @@ a {
   margin-right: 15px;
   transition: transform 0.5s ease-out;
 }
+.notifications .bell-circle {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #81C98F;
+  border-radius: 50%;
+  margin-top: -37px;
+}
 .notifications:hover {
   animation: wiggle 0.5s 1;
+}
+
+#notifs-box {
+  position: absolute;
+  right: 235px;
+  top: 50px;
+  display: none;
+  grid-template-columns: 210px;
+  grid-auto-rows: 50px;
+  background-color: #FBFBFB;
+  border: 2px #4D4C72 solid;
+  border-radius: 5px;
+  z-index: 1;
+}
+#notifs-box .notif {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px lightgrey solid;
+}
+#notifs-box .notif .circle {
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-color: #81C98F;
+  border-radius: 50%;
+}
+#notifs-box .notif p {
+  font-size: 0.7em;
+  border: none;
 }
 
 .current-user {

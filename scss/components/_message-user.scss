@@ -45,3 +45,24 @@
     justify-self: end;
   }
 }
+
+.autocomplete {
+  position: relative;
+  #autocomplete-results {
+    display: none;
+    width: 100%;
+    margin-top: -2px;
+    background: $color-off-white;
+    padding: 0;
+    li {
+      width: 100%;
+      padding: 20px 15px;
+      border-bottom: 1px solid lightgrey;
+      border-right: 1px solid lightgrey;
+      border-left: 1px solid lightgrey;
+      &:hover {
+        background: darken($color-off-white, 15%);
+      }
+    }
+  }
+}

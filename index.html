@@ -12,9 +12,31 @@
   <body>
     <header class="header">
       <h1>Your<span>App<sup>TM</sup></span></h1>
-      <div class="notifications">
+      <div id="bell" class="notifications">
         <img src="icons/icon-bell.svg" alt="Notification Bell Icon">
+        <span id="bell-circle" class="bell-circle"></span>
       </div>
+      <div id="notifs-box">
+          <div class="notif">
+            <span class="circle"></span>
+            <p>You have 6 unread messages</p>
+            <button id="notif-clear-button"><span class="notif-clear fas fa-times"></span></button>
+          </div>
+          <div class="notif">
+            <span class="circle"></span>
+            <p>You have 3 new followers</p>
+            <button id="notif-clear-button"><span class="notif-clear fas fa-times"></span></button>  
+          </div>
+          <div class="notif">
+            <span class="circle"></span>
+            <p>Your password expires in 7 days</p>
+            <button id="notif-clear-button"><span class="notif-clear fas fa-times"></span></button>  
+          </div>
+          <div class="notif">
+            <p>Close all notifications</p>
+            <button id="notif-clear-button"><span class="notif-clear-all fas fa-times"></span></button>  
+          </div>
+        </div>
       <div class="current-user">
         <img src="images/cupping.jpg" alt="Profile Picture">
         <p>Nicholas Bright</p>
@@ -46,11 +68,11 @@
         </div>
         <div class="traffic grid-item2">
           <h3>TRAFFIC</h3>
-          <ul class="traffic-chart-nav">
-            <li><a class="hourly" href="#"><h4>Hourly</h4></a></li>
-            <li><a class="daily" href="#"><h4>Daily</h4></a></li>
-            <li class="active"><a class="weekly" href="#"><h4>Weekly</h4></a></li>
-            <li><a class="monthly" href="#"><h4>Monthly</h4></a></li>
+          <ul id="traffic-chart-nav" class="traffic-chart-nav">
+            <li><a class="hourly" href="#"><h4 class="traffic-link">Hourly</h4></a></li>
+            <li><a class="daily" href="#"><h4 class="traffic-link">Daily</h4></a></li>
+            <li class="active"><a class="weekly" href="#"><h4 class="traffic-link">Weekly</h4></a></li>
+            <li><a class="monthly" href="#"><h4 class="traffic-link">Monthly</h4></a></li>
           </ul>
           <div class="chart-container">
             <canvas id="trafficChart"></canvas>
@@ -220,8 +242,11 @@
         </div>
         <div class="message-user grid-item2">
           <h3>MESSAGE USER</h3>
-          <form class="message" id="message-form" method="get">
-            <input id="message-user" class="message-input" type="text" name="search-for-user" placeholder="Search for User">
+          <form class="message" id="message-form" method="get" autocomplete="off">
+            <div class="autocomplete">
+              <input id="message-user" class="message-input" type="text" name="search-for-user" placeholder="Search for User">
+              <ul id="autocomplete-results"></ul>
+            </div>
             <textarea id="message-content" class="message-input" name="message-guts" rows="5" cols="20" placeholder="Message for User"></textarea>
             <input id="message-submit" class="message-submit" type="submit" name="message-submit" value="SEND">
           </form>
@@ -235,7 +260,7 @@
               </div>
               <div></div>
               <div class="toggle-1">
-                <input type="checkbox" class="switch-1" id="switch-1" checked />
+                <input type="checkbox" class="switch-1" id="switch-1" />
                 <label for="switch-1" class="switch-label-1"></label>
                 <p class="toggle-on">ON</p>
                 <p class="toggle-off">OFF</p>
@@ -245,14 +270,14 @@
               </div>
               <div></div>
               <div class="toggle-2">
-                <input type="checkbox" class="switch-2" id="switch-2" checked />
+                <input type="checkbox" class="switch-2" id="switch-2" />
                 <label for="switch-2" class="switch-label-2"></label>
                 <p class="toggle-on">ON</p>
                 <p class="toggle-off">OFF</p>
               </div>
             </div>
             <div class="timezone-container">
-              <select class="timezone" name="timezone">
+              <select id="timezone" class="timezone" name="timezone">
                 <option value="">Your Timezone</option>
                 <option value="">GMT</option>
                 <option value="">UTC</option>
@@ -289,8 +314,8 @@
               </select>
             </div>
             <div class="settings-buttons">
-              <input class="settings-submit" type="submit" name="settings-submit" value="SUBMIT">
-              <input class="settings-cancel" type="reset" name="settings-cancel" value="CANCEL">
+              <input id="settings-submit" class="settings-submit" type="submit" name="settings-submit" value="SUBMIT">
+              <input id="settings-cancel" class="settings-cancel" type="reset" name="settings-cancel" value="CANCEL">
             </div>
           </form>
         </div>
