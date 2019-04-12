@@ -35,40 +35,40 @@
         margin: 0;
       }
     }
-    @media (min-width: 1250px) {
+    @include mq("six") {
       width: 330px;
     }
   }
   h3 {
     justify-self: start;
-    @media (min-width: 768px) {
+    @include mq("four") {
       grid-area: social-title;
     }
   }
   .twitter {
-    @media (min-width: 768px) {
+    @include mq("four") {
       grid-area: twitter;
       justify-self: end;
     }
-    @media (min-width: 1024px) {
+    @include mq("five") {
       justify-self: center;
     }
   }
   .facebook {
-    @media (min-width: 768px) {
+    @include mq("four") {
       grid-area: facebook;
       justify-self: start;
     }
-    @media (min-width: 1024px) {
+    @include mq("five") {
       justify-self: center;
     }
   }
   .google-plus {
-    @media (min-width: 768px) {
+    @include mq("four") {
       grid-area: google-plus;
     }
   }
-  @media (min-width: 768px) {
+  @include mq("four") {
     width: 100vw;
     margin: 0;
     padding: 30px;
@@ -80,7 +80,7 @@
     "twitter facebook"
     "google-plus google-plus";
   }
-  @media (min-width: 1024px) {
+  @include mq("five") {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:

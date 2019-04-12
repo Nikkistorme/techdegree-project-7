@@ -14,7 +14,7 @@
     li {
       border-radius: 20px;
       padding: 5px 10px;
-      @media (min-width: 500px) {
+      @include mq("two") {
         font-size: 1.1em;
       }
       &.active {
@@ -25,16 +25,16 @@
   }
   .chart-container {
     height: 180px;
-    @media (min-width: 768px) {
+    @include mq("four") {
       height: 280px;
     }
   }
-  @media (min-width: 768px) {
+  @include mq("four") {
     margin: 0;
     padding: 15px 20px;
     width: 100vw;
   }
-  @media (min-width: 1024px) {
+  @include mq("five") {
     width: 100%;
     max-width: 1100px;
   }

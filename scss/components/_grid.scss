@@ -1,15 +1,18 @@
 
 // SET UP GRID
+
+// main grid
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 1fr;
-  @media (min-width: 1024px) {
+  @include mq("five") {
     grid-template-columns: 80px 1fr;
     grid-template-rows: 1fr;
   }
 }
 
+// sub grid
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -26,7 +29,7 @@
     "message-user"
     "settings";
   justify-items: center;
-  @media (min-width: 768px) {
+  @include mq("four") {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px repeat(6, auto);
     grid-template-areas:
@@ -39,11 +42,12 @@
       "message-user settings";
     justify-items: start;
   }
-  @media (min-width: 1024px) {
+  @include mq("five") {
     justify-items: center;
   }
 }
 
+// set up grid areas
 .dashboard {
   grid-area: dashboard;
 }

@@ -66,7 +66,7 @@
       border: none;
     }
   }
-  @media (min-width: 500px) {
+  @include mq("two") {
     right: 235px;
   }
 }
@@ -89,7 +89,7 @@
     font-size: 1.1em;
     margin: auto;
     padding-left: 15px;
-    @media (min-width: 500px) {
+    @include mq("two") {
       display: inline-block;
     }
   }

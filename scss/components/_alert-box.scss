@@ -10,34 +10,34 @@
   padding-left: 10px;
   padding-right: 10px;
   color: $color-white;
-  @media (min-width: 600px) {
+  @include mq("three") {
     margin: 15px;
   }
-  @media (min-width: 768px) {
+  @include mq("four") {
     justify-content: space-between;
   }
   p {
     font-size: .7em;
     width: 80%;
-    @media (min-width: 500px) {
+    @include mq("two") {
       font-size: .8em;
     }
-    @media (min-width: 600px) {
+    @include mq("three") {
       font-size: 1em;
     }
-    @media (min-width: 768px) {
+    @include mq("four") {
       width: 100%;
       text-align: center;
     }
   }
   h3 {
     margin: 0;
-    @media (min-width: 768px) {
+    @include mq("four") {
       margin: 0 10px 0 10px;
     }
   }
   button {
-    @media (min-width: 768px) {
+    @include mq("four") {
       margin: 0 10px 0 10px;
     }
   }

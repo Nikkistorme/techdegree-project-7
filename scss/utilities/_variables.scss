@@ -3,6 +3,14 @@
 $font-primary: 'Fira Sans', sans-serif;
 
 // BREAKPOINTS
+$breakpoints: (
+    'one'   : 380px,
+    'two'   : 500px,
+    'three' : 600px,
+    'four'  : 768px,
+    'five'  : 1024px,
+    'six'   : 1250px
+);
 
 // COLORS
 $color-white: #FFFFFF;
