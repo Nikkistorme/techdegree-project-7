@@ -543,10 +543,10 @@ a {
 }
 
 .settings {
-  margin: 15px 20px;
-  width: 87vw;
   display: flex;
   flex-direction: column;
+  margin: 15px 20px;
+  width: 87vw;
 }
 .settings .settings-form {
   display: grid;
@@ -714,7 +714,7 @@ a {
 }
 @media (min-width: 768px) {
   .settings-buttons {
-    align-self: flex-end;
+    align-self: end;
   }
 }
 
@@ -970,11 +970,11 @@ a {
   width: 87vw;
 }
 .social-stats .social-box {
-  padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
   background-color: #FBFBFB;
   border: 1px solid lightgrey;
   max-width: 330px;
@@ -1160,8 +1160,8 @@ a {
 .alert-banner {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   background-color: #7477BF;
   border-radius: 5px;
   margin: 5px;
@@ -1220,8 +1220,8 @@ a {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .header h1 {
   padding-left: 5px;
@@ -1301,11 +1301,11 @@ a {
 }
 
 .current-user {
+  display: flex;
+  flex-direction: row;
   padding-right: 5px;
   padding-left: 15px;
   border-left: 1px solid #6568BF;
-  display: flex;
-  flex-direction: row;
 }
 .current-user img {
   width: 50px;
@@ -1338,14 +1338,14 @@ a {
   margin-right: 15px;
 }
 .dashboard .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #FBFBFB;
   border-left: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   height: 100%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 .dashboard .search-bar input {

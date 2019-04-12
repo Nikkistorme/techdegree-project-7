@@ -1,17 +1,13 @@
 
 .side-bar {
-  display: flex;
-  align-items: center;
+  @include flexy($ali: center);
   background-color: $color-deep-purple;
   width: 100%;
   nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include flexy($dir: row, $just: space-evenly);
     width: 100%;
     a {
-      display: flex;
-      justify-content: center;
+      @include flexy($just: center);
       height: 60px;
       width: 70px;
       border: 5px solid transparent;

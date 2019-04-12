@@ -1,9 +1,6 @@
 
 .alert-banner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  @include flexy($dir: row, $just: space-around, $ali: center);
   background-color: $color-indigo;
   border-radius: 5px;
   margin: 5px;

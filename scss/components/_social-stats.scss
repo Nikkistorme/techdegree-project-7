@@ -10,19 +10,14 @@
   justify-items: center;
   width: 87vw;
   .social-box {
+    @include flexy($dir: row, $ali: center, $just: space-between);
     padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     background-color: $color-off-white;
     border: 1px solid lightgrey;
     max-width: 330px;
     min-width: 277px;
     &-descript {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      @include flexy($dir: column, $ali: flex-start);
       margin-right: auto;
       margin-left: 20px;
       h3 {

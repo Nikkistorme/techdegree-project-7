@@ -5,9 +5,7 @@
   width: 87vw;
   padding-bottom: 10px;
   .traffic-chart-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    @include flexy($dir: row, $just: flex-end);
     h4 {
       margin: 0;
     }

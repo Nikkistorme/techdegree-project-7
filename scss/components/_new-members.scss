@@ -28,8 +28,7 @@
         }
       }
       &-info {
-        display: flex;
-        flex-direction: column;
+        @include flexy($dir: column);
         flex: 1;
         @include mq("two") {
           flex-direction: row;
