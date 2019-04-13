@@ -9,14 +9,42 @@
 
 // FLEXBOX
 @mixin flexy(
-  $disp: flex,
-  $dir: null,
-  $wrap: null,
-  $ali: null,
-  $just: null) {
-  display: $disp;
-  flex-direction: $dir;
-  flex-wrap: $wrap;
-  align-items: $ali;
-  justify-content: $just;
+    $disp: flex,
+    $dir: null,
+    $wrap: null,
+    $ali: null,
+    $just: null
+) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    align-items: $ali;
+    justify-content: $just;
+}
+
+// GRID
+@mixin gridboi(
+    $disp: grid,
+    $col-temp: null,
+    $col-auto: null,
+    $row-temp: null,
+    $row-auto: null,
+    $just-cont: null,
+    $just-item: null,
+    $ali-cont: null,
+    $ali-item: null,
+    $col-gap: null,
+    $row-gap: null
+) {
+    display: $disp;
+    grid-template-columns: $col-temp;
+    grid-auto-columns: $col-auto;
+    grid-template-rows: $row-temp;
+    grid-auto-rows: $row-auto;
+    justify-content: $just-cont;
+    justify-items: $just-item;
+    align-content: $ali-cont;
+    align-items: $ali-item;
+    grid-column-gap: $col-gap;
+    grid-row-gap: $row-gap;
 }

@@ -4,14 +4,10 @@
   border-bottom: 1px solid lightgrey;
   width: 87vw;
   .members-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 75px);
-    grid-row-gap: 15px;
+    @include gridboi($col-temp: 1fr, $row-temp: repeat(4, 75px), $row-gap: 15px);
     margin-top: 30px;
     .member {
-      display: flex;
-      flex-direction: row;
+      @include flexy($dir: row);
       border-bottom: 1px solid lighten(lightgrey, 10%);
       &-image {
         width: 60px;

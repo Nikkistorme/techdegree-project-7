@@ -398,6 +398,7 @@ a {
 }
 @media (min-width: 1024px) {
   .main-container {
+    display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 1fr;
   }
@@ -407,15 +408,16 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 70px repeat(9, auto);
-  grid-template-areas: "dashboard" "alert-box" "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
   justify-items: center;
+  grid-template-areas: "dashboard" "alert-box" "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
 }
 @media (min-width: 768px) {
   .sub-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px repeat(6, auto);
-    grid-template-areas: "dashboard dashboard" "alert-box alert-box" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
     justify-items: start;
+    grid-template-areas: "dashboard dashboard" "alert-box alert-box" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
   }
 }
 @media (min-width: 1024px) {
@@ -476,11 +478,11 @@ a {
   width: 87vw;
 }
 .message-user .message {
-  margin: 20px 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-row-gap: 15px;
+  margin: 20px 0;
 }
 .message-user .message .message-input {
   border-radius: 7px;
@@ -552,8 +554,8 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 40px 50px;
-  height: 272px;
   grid-row-gap: 20px;
+  height: 272px;
 }
 @media (min-width: 600px) {
   .settings {
@@ -578,11 +580,11 @@ a {
 }
 
 .settings-toggles {
-  margin-left: 10px;
   display: grid;
   grid-template-columns: 180px 1fr 80px;
   grid-template-rows: repeat(2, 50px);
   align-items: center;
+  margin-left: 10px;
   align-self: center;
 }
 @media (min-width: 1024px) {
@@ -709,8 +711,8 @@ a {
 .settings-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
   grid-template-rows: 1fr;
+  grid-column-gap: 30px;
 }
 @media (min-width: 768px) {
   .settings-buttons {
@@ -959,14 +961,14 @@ a {
 }
 
 .social-stats {
-  margin: 15px 20px;
-  padding-bottom: 30px;
-  border-bottom: lightgrey solid 1px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-  grid-row-gap: 30px;
   justify-items: center;
+  grid-row-gap: 30px;
+  margin: 15px 20px;
+  padding-bottom: 30px;
+  border-bottom: lightgrey solid 1px;
   width: 87vw;
 }
 .social-stats .social-box {
@@ -1038,17 +1040,18 @@ a {
 }
 @media (min-width: 768px) {
   .social-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
     width: 100vw;
     margin: 0;
     padding: 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
-    grid-template-rows: repeat(3, auto);
     grid-template-areas: "social-title social-title" "twitter facebook" "google-plus google-plus";
   }
 }
 @media (min-width: 1024px) {
   .social-stats {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: "social-title social-title social-title" "twitter facebook google-plus";
@@ -1264,12 +1267,13 @@ a {
 }
 
 #notifs-box {
-  position: absolute;
-  right: 95px;
-  top: 50px;
   display: none;
   grid-template-columns: 210px;
   grid-auto-rows: 50px;
+  display: none;
+  position: absolute;
+  right: 95px;
+  top: 50px;
   background-color: #FBFBFB;
   border: 2px #4D4C72 solid;
   border-radius: 5px;

@@ -3,20 +3,15 @@
 
 // main grid
 .main-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 60px 1fr;
+  @include gridboi($col-temp: 1fr, $row-temp: 60px 1fr);
   @include mq("five") {
-    grid-template-columns: 80px 1fr;
-    grid-template-rows: 1fr;
+    @include gridboi($col-temp: 80px 1fr, $row-temp: 1fr);
   }
 }
 
 // sub grid
 .sub-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px repeat(9, auto);
+  @include gridboi($col-temp: 1fr, $row-temp: 70px repeat(9, auto), $just-item: center);
   grid-template-areas:
     "dashboard"
     "alert-box"
@@ -28,10 +23,8 @@
     "recent-activity"
     "message-user"
     "settings";
-  justify-items: center;
   @include mq("four") {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px repeat(6, auto);
+    @include gridboi($col-temp: 1fr 1fr, $row-temp: 70px repeat(6, auto), $just-item: start);
     grid-template-areas:
       "dashboard dashboard"
       "alert-box alert-box"
@@ -40,7 +33,6 @@
       "social-stats social-stats"
       "new-members recent-activity"
       "message-user settings";
-    justify-items: start;
   }
   @include mq("five") {
     justify-items: center;

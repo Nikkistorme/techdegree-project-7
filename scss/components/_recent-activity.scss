@@ -4,10 +4,7 @@
   border-bottom: 1px solid lightgrey;
   width: 87vw;
   .activities-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 75px);
-    grid-row-gap: 15px;
+    @include gridboi($col-temp: 1fr, $row-temp: repeat(4, 75px), $row-gap: 15px);
     margin-top: 30px;
     .activity {
       @include flexy($dir: row);

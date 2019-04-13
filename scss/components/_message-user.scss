@@ -4,11 +4,8 @@
   border-bottom: 1px solid lightgrey;
   width: 87vw;
   .message {
+    @include gridboi($col-temp: 1fr, $row-temp: repeat(3, auto), $row-gap: 15px);
     margin: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-row-gap: 15px;
     .message-input {
       border-radius: 7px;
       border: 1px solid lightgrey;

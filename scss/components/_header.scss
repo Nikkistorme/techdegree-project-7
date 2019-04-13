@@ -34,12 +34,11 @@
 }
 
 #notifs-box {
+  @include gridboi($disp: none, $col-temp: 210px, $row-auto: 50px);
+  display: none;
   position: absolute;
   right: 95px;
   top: 50px;
-  display: none;
-  grid-template-columns: 210px;
-  grid-auto-rows: 50px;
   background-color: $color-off-white;
   border: 2px $color-deep-purple solid;
   border-radius: 5px;

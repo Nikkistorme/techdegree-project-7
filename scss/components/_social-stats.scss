@@ -1,13 +1,9 @@
 
 .social-stats {
+  @include gridboi($col-temp: 1fr, $row-temp: repeat(3, auto), $row-gap: 30px, $just-item: center);
   margin: 15px 20px;
   padding-bottom: 30px;
   border-bottom: lightgrey solid 1px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  grid-row-gap: 30px;
-  justify-items: center;
   width: 87vw;
   .social-box {
     @include flexy($dir: row, $ali: center, $just: space-between);
@@ -64,20 +60,17 @@
     }
   }
   @include mq("four") {
+    @include gridboi($col-temp: 1fr 1fr, $col-gap: 30px);
     width: 100vw;
     margin: 0;
     padding: 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
-    grid-template-rows: repeat(3, auto);
     grid-template-areas:
     "social-title social-title"
     "twitter facebook"
     "google-plus google-plus";
   }
   @include mq("five") {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    @include gridboi($col-temp: 1fr 1fr 1fr, $row-temp: auto auto);
     grid-template-areas:
     "social-title social-title social-title"
     "twitter facebook google-plus";
