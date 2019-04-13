@@ -3,23 +3,28 @@
   @include flexy($ali: center);
   background-color: $color-deep-purple;
   width: 100%;
+  @include mq("five") {
+    align-items: flex-start;
+  }
   nav {
     @include flexy($dir: row, $just: space-evenly);
     width: 100%;
+    @include mq('five') {
+      flex-direction: column;
+      margin-top: 25px;  
+    }
     a {
       @include flexy($just: center);
-      height: 60px;
-      width: 70px;
+      @include wh($h: 60px, $w: 70px);
       border: 5px solid transparent;
       @include mq("five") {
-        width: auto;
-        height: 70px;
+        @include wh($h: 70px);
       }
       &.active {
-        border-bottom: 5px solid #81C98F;
+        border-bottom: 5px solid $color-green;
         @include mq("five") {
           border: 5px solid transparent;
-          border-left: 5px solid #81C98F;
+          border-left: 5px solid $color-green;
         }
       }
       img {
@@ -34,12 +39,5 @@
         text-align: center;  
       }
     }
-    @include mq("five") {
-      flex-direction: column;
-      margin-top: 25px;
-    }  
-  }
-  @include mq("five") {
-    align-items: flex-start;
   }
 }

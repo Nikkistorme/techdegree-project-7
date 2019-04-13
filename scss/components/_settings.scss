@@ -1,26 +1,23 @@
 
 .settings {
   @include flexy($dir: column);
-  margin: 15px 20px;
-  width: 87vw;
-  .settings-form {
-    @include gridboi($col-temp: 1fr, $row-temp: auto 40px 50px, $row-gap: 20px);
-    height: 272px;
-  }
-  @media (min-width: 600px) {
+  @include widget($bord: none);
+  @include mq('three') {
     width: 500px;
     align-self: center;
   }
-  @media (min-width: 768px) {
-    width: 50vw;
-    margin: 0;
-    padding: 15px 20px;
+  @include mq('four') {
+    @include widget($wid: 50vw, $marg: 0, $pad: 15px 20px);
     align-self: start;
   }
-  @media (min-width: 1024px) {
+  @include mq('five') {
     width: 100%;
     max-width: 550px;
     justify-self: start;
+  }
+  .settings-form {
+    @include gridboi($col-temp: 1fr, $row-temp: auto 40px 50px, $row-gap: 20px);
+    height: 272px;
   }
 }
 
@@ -28,8 +25,33 @@
   @include gridboi($col-temp: 180px 1fr 80px, $row-temp: repeat(2, 50px), $ali-item: center);
   margin-left: 10px;
   align-self: center;
-  @media (min-width: 1024px) {
+  @include mq('five') {
     grid-template-columns: 180px 50px 80px;
+  }
+  .toggle-1,
+  .toggle-2 {
+    @include wh($w: 80px, $h: 30px);
+    .switch-label-1,
+    .switch-label-2 {
+      @include wh($w: 100%,$h: 100%);
+      cursor: pointer;
+      background: $color-off-white;
+      display: block;
+      border-radius: 100px;
+      border: 2px solid lightgrey;
+      position: relative;
+      &:after {
+        @include wh($w: 27%, $h: 75%);
+        content: '';
+        position: absolute;
+        top: 3%;
+        left: 2.5%;
+        background: $color-white;
+        border: 2px solid lightgrey;
+        border-radius: 90px;
+        transition: 0.3s;
+      }
+    }
   }
 }
 
@@ -39,51 +61,17 @@
 }
 
 .toggle-on {
-  position: absolute;
+  @include toggle();
   margin: -24px 0 0 10px;
-  font-size: 1em;
   color: $color-white;
-  z-index: 1;
-  pointer-events: none;
 }
 .toggle-off {
-  position: absolute;
+  @include toggle();
   margin: -24px 0 0 42px;
-  font-size: 1em;
   color: lightgrey;
-  z-index: 1;
-  pointer-events: none;
 }
 
-.toggle-1,
-.toggle-2 {
-  width: 80px;
-  height: 30px;
-  .switch-label-1,
-  .switch-label-2 {
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    background: $color-off-white;
-    display: block;
-    border-radius: 100px;
-    border: 2px solid lightgrey;
-    position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 3%;
-      left: 2.5%;
-      width: 27%;
-      height: 75%;
-      background: $color-white;
-      border: 2px solid lightgrey;
-      border-radius: 90px;
-      transition: 0.3s;
-    }
-  }
-}
-
+// TOGGLE FUNCTIONALITY
 .switch-1 {
   &:checked + .switch-label-1 {
     background: $color-indigo;
@@ -92,15 +80,7 @@
     left: calc(100% - 2px);
     transform: translateX(-100%);
   }
-  & ~ p.toggle-on {
-    display: none;
-  }
-  &:checked  ~ p.toggle-off {
-    visibility: hidden;
-  }
-  &:checked ~ p.toggle-on {
-    display: block;
-  }
+  @include switchy();
 }
 
 .switch-2 {
@@ -111,34 +91,25 @@
     left: calc(100% - 2px);
     transform: translateX(-100%);
   }
-  & ~ p.toggle-on {
-    display: none;
-  }
-  &:checked  ~ p.toggle-off {
-    visibility: hidden;
-  }
-  &:checked ~ p.toggle-on {
-    display: block;
-  }
+  @include switchy();
 }
 
+// timezone select
 .timezone-container {
+  @include wh($w: 100%, $h: 40px);
   overflow: hidden;
-  width: 100%;
-  height: 40px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
   background: $color-off-white url(../images/icon-chevron.png) no-repeat scroll 96% center;
   .timezone {
-    border: 1px lightgrey solid;
+    @include wh($w: 100%, $h: 100%);
+    border: $border-light;
     border-radius: 7px;
     background: transparent;
     font-size: 16px;
     color: grey;
     padding: 2px 10px;
-    width: 100%;
-    height: 100%;
     -webkit-appearance: none;
     &:focus {
       outline: none;
@@ -146,29 +117,16 @@
   }
 }
 
+// settings buttons
 .settings-buttons {
   @include gridboi($col-temp: 1fr 1fr, $row-temp: 1fr, $col-gap: 30px);
   @include mq("four") {
     align-self: end;
   }
-}
-
-.settings-submit {
-  background: $color-indigo;
-  color: $color-white;
-  font-weight: bold;
-  border: 0;
-  border-radius: 7px;
-  height: 50px;
-  outline: none;
-}
-
-.settings-cancel {
-  background: #B2B2B2;
-  color: $color-white;
-  font-weight: bold;
-  border: 0;
-  border-radius: 7px;
-  height: 50px;
-  outline: none;
+  .settings-submit {
+    @include setbut($color-indigo);
+  }
+  .settings-cancel {
+    @include setbut(#B2B2B2);
+  }
 }

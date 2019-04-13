@@ -1,28 +1,19 @@
 
 .recent-activity {
-  margin: 15px 20px;
-  border-bottom: 1px solid lightgrey;
-  width: 87vw;
+  @include widget();
+  @include mq("four") {
+    @include widget($wid: 50vw, $marg: 0, $pad: 15px 20px);
+  }
+  @include mq("five") {
+    width: 100%;
+    max-width: 550px;
+    justify-self: start;
+  }
   .activities-list {
     @include gridboi($col-temp: 1fr, $row-temp: repeat(4, 75px), $row-gap: 15px);
     margin-top: 30px;
     .activity {
-      @include flexy($dir: row);
-      border-bottom: 1px solid lighten(lightgrey, 10%);
-      &-image {
-        width: 60px;
-        height: 60px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-right: 15px;
-        img {
-          display: inline;
-          margin: 0 auto;
-          height: 100%;
-          width: auto;
-        }
-      }
+      @include memblock();
       &-info {
         @include flexy($dir: column, $just: center);
         flex: 1;
@@ -38,15 +29,5 @@
         border: 0;
       }
     }
-  }
-  @include mq("four") {
-    width: 50vw;
-    margin: 0;
-    padding: 15px 20px;
-  }
-  @include mq("five") {
-    width: 100%;
-    max-width: 550px;
-    justify-self: start;
   }
 }

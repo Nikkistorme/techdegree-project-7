@@ -1,20 +1,16 @@
 
 .daily-traffic {
-  margin: 15px 20px;
-  border-bottom: lightgrey solid 1px;
-  width: 87vw;
-  canvas {
-    margin: 20px 0;
-  }
+  @include widget();
   @include mq("four") {
-    width: 50vw;
-    margin: 0;
-    padding: 15px 20px;
-    border-right: lightgrey solid 1px;
+    @include widget($wid: 50vw, $marg: 0, $pad: 15px 20px);
+    border-right: $border-light;
   }
   @include mq("five") {
     width: 100%;
     max-width: 550px;
     justify-self: end;
+  }
+  canvas {
+    margin: 20px 0;
   }
 }

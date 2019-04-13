@@ -1,9 +1,14 @@
 
 .traffic {
-  margin: 15px 20px;
-  border-bottom: lightgrey solid 1px;
-  width: 87vw;
+  @include widget();
   padding-bottom: 10px;
+  @include mq("four") {
+    @include widget($marg: 0, $pad: 15px 20px, $wid: 100vw);
+  }
+  @include mq("five") {
+    width: 100%;
+    max-width: 1100px;
+  }
   .traffic-chart-nav {
     @include flexy($dir: row, $just: flex-end);
     h4 {
@@ -26,14 +31,5 @@
     @include mq("four") {
       height: 280px;
     }
-  }
-  @include mq("four") {
-    margin: 0;
-    padding: 15px 20px;
-    width: 100vw;
-  }
-  @include mq("five") {
-    width: 100%;
-    max-width: 1100px;
   }
 }

@@ -2,11 +2,10 @@
 .alert-banner {
   @include flexy($dir: row, $just: space-around, $ali: center);
   background-color: $color-indigo;
+  color: $color-white;
   border-radius: 5px;
   margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: $color-white;
+  padding: 0 10px 0 10px;
   @include mq("three") {
     margin: 15px;
   }

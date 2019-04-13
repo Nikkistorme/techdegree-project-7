@@ -6,6 +6,7 @@
   }
 }
 
+// NOTIFICATIONS
 @keyframes wiggle {
   0% {transform: rotate(10deg);}
   25% {transform: rotate(-10deg);}
@@ -17,15 +18,11 @@
 .notifications {
   width: 30px;
   padding-top: 7px;
-  margin-left: auto;
-  margin-right: 15px;
+  margin: auto 15px auto auto;
   transition: transform .5s ease-out;
   .bell-circle {
+    @include dot;
     position: absolute;
-    height: 12px;
-    width: 12px;
-    background-color: #81C98F;
-    border-radius: 50%;
     margin-top: -37px;
   }
   &:hover {
@@ -43,35 +40,31 @@
   border: 2px $color-deep-purple solid;
   border-radius: 5px;
   z-index: 1;
+  @include mq("two") {
+    right: 235px;
+  }
   .notif {
     @include flexy($dir: row, $ali: center, $just: space-between);
     padding: 0 10px;
-    border-bottom: 1px lightgrey solid;
+    border-bottom: $border-light;
     .circle {
+      @include dot;
       display: block;
-      height: 12px;
-      width: 12px;
-      background-color: #81C98F;
-      border-radius: 50%;
     }
     p {
       font-size: .7em;
       border: none;
     }
   }
-  @include mq("two") {
-    right: 235px;
-  }
 }
 
+// CURRENT USER
 .current-user {
   @include flexy($dir: row);
-  padding-right: 5px;
-  padding-left: 15px;
+  padding: 0 5px 0 15px;
   border-left: 1px solid #6568BF;
   img {
-    width: 50px;
-    height: 50px;
+    @include wh($w: 50px, $h: 50px);
     border-radius: 50%;
     vertical-align: middle;
   }
