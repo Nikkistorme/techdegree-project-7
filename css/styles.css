@@ -562,7 +562,7 @@ a {
   .settings {
     margin: 0;
     padding: 15px 20px;
-    border-bottom: lightgrey solid 1px;
+    border-bottom: none;
     width: 50vw;
     align-self: start;
   }

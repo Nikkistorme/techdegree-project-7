@@ -7,7 +7,7 @@
     align-self: center;
   }
   @include mq('four') {
-    @include widget($wid: 50vw, $marg: 0, $pad: 15px 20px);
+    @include widget($wid: 50vw, $marg: 0, $pad: 15px 20px, $bord: none);
     align-self: start;
   }
   @include mq('five') {
